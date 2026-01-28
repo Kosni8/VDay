@@ -1,1 +1,80 @@
+:root{
+	--accent:#ff6b81;
+}
+body{
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg, #fff5f8 0%, #ffeef2 100%);
+}
+main.container{
+	flex:1 0 auto;
+}
+.card-title{
+	font-size:1.5rem;
+	margin-bottom:.5rem;
+}
+.btn-primary{
+	background-color:var(--accent);
+	border-color:var(--accent);
+}
+.btn-primary:hover{
+	background-color:#ff4b6e;
+	border-color:#ff4b6e;
+}
+
+#yesBtn{
+	transition: transform 220ms ease, background-color 200ms ease;
+	transform-origin: center;
+}
+
+/* Feier-Overlay (mobil-first) */
+.celebrate-overlay{
+	position:fixed;
+	inset:0;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background: radial-gradient(circle at 20% 20%, rgba(255,107,129,0.12), transparent 15%), linear-gradient(180deg,#fff 0%, #fff5fb 100%);
+	z-index:1050;
+	padding:1rem;
+}
+.celebrate-content{
+	text-align:center;
+}
+.celebrate-title{
+	margin:0;
+	font-weight:800;
+	color:#ff2d63;
+	/* mobile-first: use clamp to scale up on larger screens */
+	font-size:clamp(2.5rem, 12vw, 8rem);
+	line-height:1;
+}
+.celebrate-title .big-heart{font-size:0.9em; margin-left:0.4rem}
+.hearts{position:absolute; inset:0; overflow:hidden; pointer-events:none}
+.float-heart{
+	position:absolute;
+	bottom:-20px;
+	opacity:0;
+	animation: floatUp 3s ease-in forwards;
+}
+@keyframes floatUp{
+	0%{transform:translateY(0) scale(0.9); opacity:0}
+	10%{opacity:1}
+	100%{transform:translateY(-120vh) scale(1.05); opacity:0}
+}
+
+/* Intro-Stile (mobil-first) */
+.intro-text .lead{
+	font-size:clamp(1rem,4.5vw,1.25rem);
+	color:#422430;
+}
+.intro-text{padding:1rem}
+.intro-text p{white-space:pre-wrap}
+.intro-text .lead{margin-bottom:1rem}
+
+@media(min-width:768px){
+	.intro-text .lead{font-size:1.25rem}
+}
 

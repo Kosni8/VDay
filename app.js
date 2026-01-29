@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			title.textContent = msg;
 
 			// Vergrößere den Ja-Button bei jedem Klick
-			yesScale = Math.min(yesScale * 1.18, 4); // Wachstum begrenzen
+			yesScale = Math.min(yesScale * 1.18, 5); // Wachstum begrenzen
 			yes.style.transform = `scale(${yesScale})`;
 
 			// Spielerisches Feedback für den Nein-Button
